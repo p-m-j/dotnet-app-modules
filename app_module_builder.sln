@@ -10,6 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 - Solution Items", "00 -
 		.gitignore = .gitignore
 		Directory.Build.props = Directory.Build.props
 		.globalconfig = .globalconfig
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppModules", "src\AppModules\AppModules.csproj", "{98971240-9434-4D56-A4E4-AEA6C6A7757C}"
