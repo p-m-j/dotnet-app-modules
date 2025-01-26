@@ -1,0 +1,12 @@
+<Project>
+  <PropertyGroup>
+    <Version>0.1.0</Version>
+    <LangVersion>12</LangVersion>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    <Authors>Paul Johnson</Authors>
+    <PackageTags>Minimal API;Module;Feature;</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/p-m-j/dotnet-app-modules</RepositoryUrl>
+    <Copyright>Copyright (c) Paul Johnson 2025</Copyright>
+  </PropertyGroup>
+</Project>
