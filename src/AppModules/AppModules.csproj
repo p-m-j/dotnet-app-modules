@@ -15,8 +15,9 @@
 
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App"/>
-    <Using Include="AppModules"/>
-    <None Include="../../README.md" Pack="true" PackagePath="\"/>
+    <None Include="../../README.md" Pack="true" PackagePath="\" />
+    <None Include="buildTransitive\AppModules.props" Pack="true" PackagePath="buildTransitive\" />
+    <None Include="buildTransitive\AppModules.props" Pack="true" PackagePath="build\" />
   </ItemGroup>
 
 </Project>

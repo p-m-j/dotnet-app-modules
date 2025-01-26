@@ -8,11 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0"/>
+    <ProjectReference Include="..\src\AppModules\AppModules.csproj"/>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\src\AppModules\AppModules.csproj" />
-  </ItemGroup>
+  <Import Project="$(ProjectDir)..\src\AppModules\buildTransitive\AppModules.props"/>
 
 </Project>

@@ -1,7 +1,4 @@
-﻿using System.Net;
-using AppModules;
-
-namespace Example.Modules.HealthChecks;
+﻿namespace Example.Modules.HealthChecks;
 
 internal static class HealthCheckModule
 {
@@ -39,7 +36,7 @@ public class HealthChecks(ILogger<HealthChecks> logger, DatabaseChecker dbChecke
         if (checks.Any(x => !x))
         {
             return Results.Problem(
-                statusCode: (int)HttpStatusCode.ServiceUnavailable,
+                statusCode: (int)System.Net.HttpStatusCode.ServiceUnavailable,
                 title: "Health check failure",
                 extensions: payload);
         }

@@ -1,6 +1,4 @@
-﻿using AppModules;
-
-namespace Example.Modules.Redirects;
+﻿namespace Example.Modules.Redirects;
 
 internal static class RedirectsModule
 {
@@ -12,5 +10,4 @@ internal static class RedirectsModule
         {
             app.MapGet("/", () => Results.Redirect("/health-check"));
         });
-
 }
