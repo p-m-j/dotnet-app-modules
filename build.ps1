@@ -1,1 +1,1 @@
-dotnet run --project targets -- $args
+dotnet run --project build -- $args

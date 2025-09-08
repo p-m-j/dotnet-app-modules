@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFrameworks>net8.0;net9.0;</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
@@ -9,7 +9,7 @@
   <PropertyGroup>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <Description>
-      My take on standardising project structure for .Net minimal API projects.
+      Provides a lightweight wrapper around ASP.NET Core `WebApplicationBuilder` designed to simplify vertical slicing in web applications.
     </Description>
   </PropertyGroup>
 

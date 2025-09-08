@@ -1,6 +1,6 @@
 <Project>
   <PropertyGroup>
-    <Version>0.2.0</Version>
+    <Version>1.0.0-pre</Version>
     <LangVersion>12</LangVersion>
     <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
     <Authors>Paul Johnson</Authors>
