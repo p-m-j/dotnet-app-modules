@@ -19,8 +19,7 @@ await RunTargetsAndExitAsync(args, ex => ex is SimpleExec.ExitCodeException);
 internal static partial class Program
 {
     private static readonly IConfiguration Config = new ConfigurationBuilder()
-        .SetBasePath(Directory.GetCurrentDirectory())
-        .AddJsonFile("./targets/settings.json")
+        .AddJsonFile("settings.json")
         .Build();
 
     private static BuildInfo BuildInfo { get; } = Utils.GetBuildInfo().GetAwaiter().GetResult();
@@ -29,8 +28,6 @@ internal static partial class Program
 
     private static Task Info()
     {
-        Console.WriteLine(Directory.GetCurrentDirectory());
-
         var rows = new List<(string, string)>
         {
             ("Commit Hash", BuildInfo.CommitHash),
@@ -76,7 +73,7 @@ internal static partial class Program
                         + " -v quiet"
                         + " --configuration Release"
                         + " --no-build"
-                        + " --output build"
+                        + " --output target"
                         + $" -p:PackageVersion={BuildInfo.Version}"
                         + $" ./src/{ProjectName}";
 

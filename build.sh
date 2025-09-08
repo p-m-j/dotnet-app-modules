@@ -1,1 +1,1 @@
-dotnet run --project targets -- "$@"
+dotnet run --project build -- "$@"
