@@ -1,19 +1,12 @@
-using Example.Modules.HealthChecks;
-using Example.Modules.Redirects;
+using Example.Modules.Greetings;
 
 var builder = WebApplication
-    .CreateBuilder();
-
-builder.Logging.AddSimpleConsole(opt => opt.SingleLine = true);
-
-builder.AddAppModules(modules =>
-    modules
-        .AddRedirectsModule()
-        .AddHealthChecksModule()
-);
+    .CreateBuilder()
+    .AddAppModules(modules =>
+    {
+        modules.AddGreetingsModule();
+    });
 
 var app = builder.Build();
 app.MapModules();
 app.Run();
-
-public partial class Program;

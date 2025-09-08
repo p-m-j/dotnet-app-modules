@@ -1,27 +1,4 @@
-# AppModules (for ASP.NET Core)
-
-_[![NuGet Version](https://img.shields.io/nuget/v/AppModules)](https://www.nuget.org/packages/AppModules/)_
-
-Provides a lightweight wrapper around ASP.NET Core `WebApplicationBuilder`
-designed to simplify vertical slicing in web applications.
-
-## Usage
-
-```csharp
-// Program.cs
-
-var builder = WebApplication
-    .CreateBuilder()
-    .AddAppModules(modules =>
-    {
-        modules.AddGreetingsModule();
-    });
-
-var app = builder.Build();
-app.MapModules();
-app.Run();
-
-// GreetingsModule.cs
+namespace Example.Modules.Greetings;
 
 internal static class GreetingsModule
 {
@@ -35,7 +12,7 @@ internal static class GreetingsModule
         {
             app.MapGet("/", (GreeterService greeterService) =>
                 Results.Ok(greeterService.Greet()));
-        }); 
+        });
 
         return builder;
     }
@@ -49,4 +26,3 @@ internal class GreeterService(ILogger<GreeterService> logger)
         return $"Hello, {name}";
     }
 }
-```
